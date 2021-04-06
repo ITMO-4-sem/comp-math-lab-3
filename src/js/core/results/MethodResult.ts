@@ -17,7 +17,7 @@ export class MethodResult {
         return this.value;
     }
 
-    public getIterationsNumber() {
+    public getPartitionNumber() {
         return this.partitionNumber;
     }
 }

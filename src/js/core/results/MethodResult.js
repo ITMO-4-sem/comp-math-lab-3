@@ -12,7 +12,7 @@ class MethodResult {
     getValue() {
         return this.value;
     }
-    getIterationsNumber() {
+    getPartitionNumber() {
         return this.partitionNumber;
     }
 }

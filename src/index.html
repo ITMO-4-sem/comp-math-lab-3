@@ -2,9 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>lab - 3</title>
 </head>
-<body>
 
+
+<body>
+<section class="hero is-primary">
+    <div class="hero-body has-text-centered">
+        <p class="title">
+            Лабораторная работа №3 по Вычислительной математике
+        </p>
+        <p class="subtitle">
+            Численное интегрирование
+        </p>
+    </div>
+</section>
+
+
+<div class="container is-max-desktop">
+
+    <div class="notification is-warning is-light mt-5">
+        <button id="notification-delete" class="delete"></button>
+        <p id="notification-content"></p>
+    </div>
+
+
+    <form id="form">
+
+
+        <h3 class="title is-3">Выберете функцию, метод и отрезок интегрирования</h3>
+
+
+        <div class="field functions-block">
+
+            <div class="control mb-3">
+                <label class="radio">
+                    <input value="first" required type="radio" name="function">
+                    \[\int_{a}^{b} x^2\]</label>
+            </div>
+
+            <div class="control mb-3">
+                <label class="radio">
+                    <input value="second" type="radio" name="function">
+                    \[\int_{a}^{b} x^2\]</label>
+            </div>
+
+
+            <div class="control">
+                <label class="radio">
+                    <input value="third" type="radio" name="function">
+                    \[\int_{a}^{b} x^2\]</label>
+            </div>
+        </div>
+
+
+        <hr>
+
+
+        <div class="field">
+
+            <div class="control">
+                <label class="radio">
+                    <input value="rectanglesLeft" type="radio" name="method">
+                    Прямоугольников (левых)</label>
+            </div>
+
+            <div class="control">
+                <label class="radio">
+                    <input value="rectanglesRight" type="radio" name="method">
+                    Прямоугольников (правых)</label>
+            </div>
+
+
+            <div class="control">
+                <label class="radio">
+                    <input value="rectanglesMiddle" type="radio" name="method">
+                    Прямоугольников (средних)</label>
+            </div>
+
+            <div class="control">
+                <label>
+                    <input value="trapezoids" type="radio" name="method">
+                    Трапеций</label>
+            </div>
+
+            <div class="control">
+                <label>
+                    <input value="simpson" type="radio" name="method">
+                    Симпсона</label>
+            </div>
+        </div>
+
+
+        <hr>
+
+
+        <div class="field">
+            <label class="label">Начало отрезка интегрирования</label>
+            <div class="control">
+                <input class="input is-primary" name="a" step="any" required type="number">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Конец отрезка интегрирования</label>
+            <input class="input is-primary" name="b" step="any" required type="number">
+        </div>
+
+        <div class="field">
+            <label class="label">Погрешность</label>
+            <input class="input is-primary"
+                   name="accuracy"
+                   max="0.99"
+                   min="0.000001"
+                   step="any"
+                   required
+                   type="number">
+        </div>
+
+        <div class="control">
+            <button class="button is-primary">Посчитать</button>
+        </div>
+
+    </form>
+
+
+
+    <h3 class="title is-3  mt-4">Результат</h3>
+
+    <div id="loader-wrapper" class="loader-wrapper">
+        <div class="loader is-loading"></div>
+    </div>
+
+    <table class="table is-bordered">
+        <thead>
+            <tr>
+                <th>Значение интеграла</th>
+                <th>Число разбиений интервала интегрирования</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td id="result-value">12</td>
+            <td id="result-partition-number">123123</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<br>
+
+
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Лабораторная работа <strong>Максима Монахова</strong>
+        </p>
+        <p>Код на <a href="#">GitHub</a></p>
+    </div>
+</footer>
+
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="build.js"></script>
 </body>
 </html>

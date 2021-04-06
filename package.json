@@ -1,5 +1,5 @@
 {
-  "name": "comp-math-lab-2",
+  "name": "comp-math-lab-3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,5 +13,8 @@
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bulma": "^0.9.2",
+    "mathjax": "^3.1.2"
+  }
 }

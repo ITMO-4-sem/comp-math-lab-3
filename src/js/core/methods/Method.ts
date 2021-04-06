@@ -9,7 +9,7 @@ export abstract class Method {
 
     protected static readonly initialN: number = 4;
 
-    abstract calculate(input: MethodInput, funcCont: FunctionContainer): MethodResult;
+    abstract calculate(input: MethodInput, fc: FunctionContainer): MethodResult;
 
     protected isAccuracyProficient(valueN: number, valueNPrev: number | null, accuracy: number): boolean {
         if ( valueNPrev == null ) {

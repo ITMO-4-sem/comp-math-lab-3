@@ -1,0 +1,10 @@
+@import "./util/loader";
+
+.input {
+  max-width: 260px;
+}
+
+.functions-block label > *:not(input) {
+  display: inline !important;
+  color: red;
+}
