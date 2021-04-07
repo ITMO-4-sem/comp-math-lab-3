@@ -131,6 +131,8 @@ function handleFormData() {
         }
         catch (e) {
             setNotificationContent(e);
+            resultValueTDElement.innerText = "";
+            resultPartitionNumberTDElement.innerText = "";
         }
         finally {
             hideLoader();
