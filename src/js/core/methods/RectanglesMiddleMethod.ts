@@ -24,10 +24,10 @@ export class RectanglesMiddleMethod extends Method {
             valueNPrev = valueN;
             valueN = 0;
 
-            h = ( b - a ) / n;
+            h = (b - a) / n;
 
-            for ( let x = a + h/2; x <= b - h/2; x += h) {
-                valueN += fc.calc( x );
+            for (let x = a + h / 2; x <= b - h / 2; x += h) {
+                valueN += fc.calc(x);
             }
 
             valueN *= h;
@@ -39,7 +39,7 @@ export class RectanglesMiddleMethod extends Method {
                     `\n  количество разбиений: ${n}`)
             }
 
-        } while ( ! this.isAccuracyProficient(valueN, valueNPrev, accuracy) );
+        } while (!this.isAccuracyProficient(valueN, valueNPrev, accuracy));
 
         return new MethodResult(valueN, n);
 

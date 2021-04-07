@@ -33,8 +33,6 @@ class RectanglesLeftMethod extends Method_1.Method {
                     `\n  количество разбиений: ${n}`);
             }
         } while (!this.isAccuracyProficient(valueN, valueNPrev, accuracy));
-        console.log("reduLT");
-        // clearTimeout(timerId);
         return new MethodResult_1.MethodResult(valueN, n);
     }
 }

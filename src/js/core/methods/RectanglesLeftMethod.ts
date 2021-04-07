@@ -46,9 +46,6 @@ export class RectanglesLeftMethod extends Method {
         } while ( ! this.isAccuracyProficient(valueN, valueNPrev, accuracy) );
 
 
-        console.log("reduLT")
-        // clearTimeout(timerId);
-
         return new MethodResult(valueN, n);
     }
 

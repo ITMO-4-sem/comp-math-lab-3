@@ -114,7 +114,9 @@ function handleFormData() {
     let a = parseFloat(formData.get(formFieldsNames.a.name));
     let b = parseFloat(formData.get(formFieldsNames.b.name));
     let accuracy = parseFloat(formData.get(formFieldsNames.accuracy.name));
-    if (!a || !b || !accuracy) {
+    const accuracyLength = formData.get(formFieldsNames.accuracy.name).length - 2;
+    if (isNaN(a) || isNaN(b) || isNaN(accuracy)) {
+        console.log("a = ", a);
         setNotificationContent("Введите верные данные.");
         return;
     }
@@ -123,8 +125,8 @@ function handleFormData() {
     setTimeout(() => {
         try {
             res = method.calculate(new MethodInput_1.MethodInput(a, b, accuracy), funcCont);
-            resultValueTDElement.innerText = res.getValue().toString();
-            resultPartitionNumberTDElement.innerText = res.getPartitionNumber().toString();
+            resultValueTDElement.innerText = res.getValue().toFixed(accuracyLength).toString();
+            resultPartitionNumberTDElement.innerText = res.getPartitionNumber().toFixed(accuracyLength).toString();
             hideErrorNotifications();
         }
         catch (e) {

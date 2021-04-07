@@ -133,8 +133,10 @@ function handleFormData() {
     let a: number = parseFloat(formData.get(formFieldsNames.a.name) as string);
     let b: number = parseFloat(formData.get(formFieldsNames.b.name) as string);
     let accuracy: number = parseFloat(formData.get(formFieldsNames.accuracy.name) as string);
+    const accuracyLength = (formData.get(formFieldsNames.accuracy.name) as string).length - 2;
 
-    if ( !a || !b || !accuracy) {
+    if ( isNaN(a) || isNaN(b) || isNaN(accuracy) ) {
+        console.log("a = ", a)
         setNotificationContent("Введите верные данные.");
         return;
     }
@@ -147,8 +149,8 @@ function handleFormData() {
         setTimeout( () => { // тут, сука, другой контекст. Поэтому внешний для 'setTimeout()' try-catch ошибку поймать не смог.
             try {
                 res = method.calculate(new MethodInput(a, b, accuracy), funcCont);
-                resultValueTDElement.innerText = res.getValue().toString();
-                resultPartitionNumberTDElement.innerText = res.getPartitionNumber().toString();
+                resultValueTDElement.innerText = res.getValue().toFixed(accuracyLength).toString();
+                resultPartitionNumberTDElement.innerText = res.getPartitionNumber().toFixed(accuracyLength).toString();
                 hideErrorNotifications()
 
             } catch (e) {

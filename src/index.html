@@ -41,20 +41,20 @@
             <div class="control mb-3">
                 <label class="radio">
                     <input value="first" required type="radio" name="function">
-                    \[\int_{a}^{b} x^2\]</label>
+                    \[\int_{a}^{b} x^2dx\]</label>
             </div>
 
             <div class="control mb-3">
                 <label class="radio">
                     <input value="second" type="radio" name="function">
-                    \[\int_{a}^{b} x^2\]</label>
+                    \[\int_{a}^{b} x\]</label>
             </div>
 
 
             <div class="control">
                 <label class="radio">
                     <input value="third" type="radio" name="function">
-                    \[\int_{a}^{b} x^2\]</label>
+                    \[\int_{a}^{b} sin(x)\]</label>
             </div>
         </div>
 
@@ -146,8 +146,8 @@
         </thead>
         <tbody>
         <tr>
-            <td id="result-value">12</td>
-            <td id="result-partition-number">123123</td>
+            <td id="result-value"></td>
+            <td id="result-partition-number"></td>
         </tr>
         </tbody>
     </table>
@@ -165,7 +165,7 @@
         <p>
             Лабораторная работа <strong>Максима Монахова</strong>
         </p>
-        <p>Код на <a href="#">GitHub</a></p>
+        <p>Код на <a href="https://itmo-computational-math.github.io/comp-math-lab-3">GitHub</a></p>
     </div>
 </footer>
 
@@ -173,6 +173,6 @@
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="build.js"></script>
+<script src="../dist/build.js"></script>
 </body>
 </html>
