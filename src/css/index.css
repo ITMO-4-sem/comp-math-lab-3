@@ -1,0 +1,35 @@
+.loader-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s;
+  transition-delay: 0.1ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.loader-wrapper .loader {
+  color: #00d1b2;
+  height: 80px;
+  width: 80px;
+}
+.loader-wrapper.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.input {
+  max-width: 260px;
+}
+
+.functions-block label > *:not(input) {
+  display: inline !important;
+}
+
+/*# sourceMappingURL=index.css.map */
