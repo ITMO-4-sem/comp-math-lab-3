@@ -9,4 +9,4 @@
 - Трапеций
 -  Симпсона
 
-Открыть frontend можно по [ссылке](https://itmo-computational-math.github.io/comp-math-lab-3/src/) 
+Открыть frontend можно по [ссылке](http://comp-math-lab-3.itmo.maximon.site/) 
